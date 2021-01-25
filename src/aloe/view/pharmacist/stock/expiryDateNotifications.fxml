@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="399.0" prefWidth="263.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.pharmacist.stock.ExpiryDateNotificationsController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <BorderPane prefHeight="31.0" prefWidth="578.0" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="1105.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane prefHeight="30.0" prefWidth="1000.0" style="-fx-background-color: #02707d;">
+                           <left>
+                              <HBox prefHeight="31.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="333.0" text="Expired Entries" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="BALANCE_SCALE" size="20" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </left>
+                           <right>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="26.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#ffb1b1" glyphName="TIMES_CIRCLE" size="15" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="CLOSED_HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <JFXListView fx:id="entriesListView" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="570.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.receptionist.transaction.MyTransactionsController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <BorderPane prefHeight="47.0" prefWidth="1105.0" BorderPane.alignment="CENTER">
+               <left>
+                  <JFXTextField fx:id="txtSearch" maxWidth="376.0" minWidth="213.0" onKeyReleased="#searchOnList" prefHeight="50.0" prefWidth="300.0" promptText="Search My Transactions" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </JFXTextField>
+               </left>
+               <bottom>
+                  <ProgressBar fx:id="progressBar" maxWidth="40000.0" prefHeight="0.0" prefWidth="1065.0" progress="0.0" scaleY="0.4" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </BorderPane.margin>
+                  </ProgressBar>
+               </bottom>
+               <top>
+                  <BorderPane prefHeight="52.0" prefWidth="968.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="lblStatus" prefHeight="46.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" text="My Transactions" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../resources/images/repeat1_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                     <right>
+                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="249.0" BorderPane.alignment="CENTER" />
+                     </right>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </BorderPane>
+               </top>
+               <center>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="200.0" prefWidth="3000.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton fx:id="btnExcel" layoutX="207.0" layoutY="10.0" onAction="#btnExcelAction" prefHeight="1000.0" prefWidth="3000.0" text="EXPORT">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#157c02" glyphName="FILE_EXCEL_ALT" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                    <JFXButton fx:id="btnPdf" layoutX="313.0" layoutY="10.0" onAction="#btnPdfAction" prefHeight="1000.0" prefWidth="3000.0" text="EXPORT">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#9e1212" glyphName="FILE_PDF_ALT" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                    <JFXButton fx:id="btnWord" layoutX="399.0" layoutY="10.0" onAction="#btnWordAction" prefHeight="1000.0" prefWidth="3000.0" text="EXPORT">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#186dbc" glyphName="FILE_WORD_ALT" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                    <JFXButton fx:id="btnSortAsc" onAction="#btnSortAscAction" prefHeight="1000.0" prefWidth="3000.0" text="SORT">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#eb1c84" glyphName="SORT_AMOUNT_ASC" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                    <JFXButton fx:id="btnDesc" onAction="#btnDescAction" prefHeight="1000.0" prefWidth="3000.0" text="SORT">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#ae1b67" glyphName="SORT_AMOUNT_DESC" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnViewLargeTable" onAction="#btnViewLargeTableAction" prefHeight="1000.0" prefWidth="3000.0" text="V L R">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#b2580f" glyphName="TH" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <TableView fx:id="tblTransactions" prefHeight="462.0" prefWidth="3000.0">
+                     <columns>
+                        <TableColumn fx:id="transNoCol" prefWidth="230.0" text="TransNo" />
+                        <TableColumn fx:id="dateCol" prefWidth="258.0" text="Date " />
+                        <TableColumn fx:id="timeCol" prefWidth="325.0" text="Time" />
+                        <TableColumn fx:id="numberOfSalesCol" prefWidth="249.0" text="Number Of Sales" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

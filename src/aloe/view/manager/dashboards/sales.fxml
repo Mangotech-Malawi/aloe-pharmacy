@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.gauge.linear.SimpleMetroArcGauge?>
+
+<StackPane fx:id="stackPane" prefHeight="477.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.manager.dashboards.SalesController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="3000.0" prefWidth="968.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="194.0" prefWidth="191.0">
+                                 <children>
+                                    <Text fill="#144161" strokeType="OUTSIDE" strokeWidth="0.0" text="Total # of sales" wrappingWidth="230.09716796875">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #02707d;">
+                                       <children>
+                                          <Label fx:id="lblTotalSales" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #02707d;" text="2,000" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="37.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="40.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="736.0" layoutY="10.0" prefHeight="194.0" prefWidth="1000.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="215.0" prefWidth="215.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <SimpleMetroArcGauge fx:id="monthSalesMoneyGauge" maxValue="5000000.0" prefHeight="250.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Money This Month">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lblMonthSalesMoney" alignment="CENTER" prefHeight="28.0" prefWidth="269.0" text="( MWK )" textFill="#cf611b">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="656.0" layoutY="10.0" prefHeight="194.0" prefWidth="1000.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="215.0" prefWidth="215.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <SimpleMetroArcGauge fx:id="daySalesMoneyGauge" maxValue="5000000.0" prefHeight="250.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Money Today">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lblTodaySalesMoney" alignment="CENTER" prefHeight="28.0" prefWidth="269.0" text="( MWK )" textFill="#cf611b">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox alignment="CENTER" layoutX="50.0" layoutY="10.0" prefHeight="194.0" prefWidth="191.0">
+                                 <children>
+                                    <Text fill="#144161" strokeType="OUTSIDE" strokeWidth="0.0" text="Total # of Transactions" wrappingWidth="230.09716796875">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #02707d;">
+                                       <children>
+                                          <Label fx:id="lblTotalTransactions" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #02707d;" text="2000" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="41.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <HBox prefHeight="3000.0" prefWidth="968.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="200.0">
+                                 <HBox.margin>
+                                    <Insets bottom="40.0" top="40.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="3000.0" prefWidth="3000.0">
+                                 <children>
+                                    <Gauge fx:id="freqSoldEntryGauge" prefHeight="1000.0">
+                                       <VBox.margin>
+                                          <Insets left="30.0" />
+                                       </VBox.margin>
+                                    </Gauge>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="239.0" style="-fx-background-color: #cf611b;" text="Frequently Sold Drug | Entries" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblMostSoldDrugEntryName" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: #02707d;" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="3000.0" prefWidth="3000.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <MenuButton fx:id="menuBtnAvg" mnemonicParsing="false" prefHeight="37.0" prefWidth="251.0" style="-fx-background-color: #cf611b;" text="Year AVG Sales Money" textFill="WHITE">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnYearAction" text="Year AVG Sales Money" />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnMonthAction" text="Month AVG Sales Money" />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnDayAction" text="Day AVG Sales Money" />
+                                       </items>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </MenuButton>
+                                    <Label fx:id="lblDate" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="111.0" prefHeight="1000.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="31, January, 2019" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Line endX="100.0" startX="-100.0" stroke="WHITE" />
+                                    <Label fx:id="lblAvgSaleMoney" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="146.0" prefHeight="1000.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="499.0" layoutY="10.0" prefHeight="3000.0" prefWidth="3000.0">
+                                 <children>
+                                    <Gauge fx:id="freqSoldPackGauge" prefHeight="148.0" />
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #cf611b;" text="Frequently Sold Drug I Packs" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblFreqSoldDrugPackName" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </center>
+         <top>
+            <BorderPane prefHeight="52.0" prefWidth="968.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblStatus" prefHeight="46.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" text="Sales Dashboard" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../resources/images/pie-chart-6.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="249.0" BorderPane.alignment="CENTER" />
+               </right>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

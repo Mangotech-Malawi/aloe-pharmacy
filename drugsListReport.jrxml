@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="drugsListReport" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04dafeb1-60f5-4571-8092-10b4eeed1627">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * FROM drugs;]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="firstCategory" class="java.lang.String"/>
+	<field name="secCategory" class="java.lang.String"/>
+	<field name="sellingPrice" class="java.lang.Double"/>
+	<field name="orderPrice" class="java.lang.Double"/>
+	<field name="measurement" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement uuid="bd12ed0b-dde5-45cd-aca6-2e41cf1a90fe" x="252" y="9" width="306" height="32"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Aloe | Pharmacy System Report]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="af978185-b160-4f63-8c96-07a3f5bec932" x="696" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f861be4c-3e4e-42d4-b9c3-629db9653587" x="10" y="0" width="183" height="35"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drug Details List :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="52b75324-0fac-4a65-ae36-f38714646d89" x="0" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="82e3a9e5-51b6-45c2-a23a-6bbda56f071c" x="114" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fc022be4-55a4-4206-97d5-53d98e6d1fc6" x="228" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[firstCategory]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f357268a-e27c-44b8-b7e4-b02d780def54" x="342" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[secCategory]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f38b770-084b-4b1b-8fe7-f09d6cbe7fb9" x="456" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[sellingPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87b568aa-efc8-4be0-86e4-78b88ececa16" x="570" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[orderPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2278b43a-16ed-49de-af62-a8f02d0b4b00" x="684" y="0" width="114" height="20"/>
+				<textElement/>
+				<text><![CDATA[measurement]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="219310ab-b083-43a5-ae4a-0e90b6214948" x="0" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6514d1da-2f37-4ebb-9d9c-83926c18c6dd" x="114" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="75996c2d-27db-45e0-ab88-cb502047d715" x="228" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{firstCategory}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c279e729-8548-4310-b1af-ca74add01501" x="342" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{secCategory}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ccc5c1f5-26b1-4088-8255-fc6b02dfd692" x="456" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{sellingPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1fd22fc4-8c9d-4bda-ad61-36b6641f5b0f" x="570" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{orderPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5fe9d4c7-fbf6-46a1-b1ea-dbc9db1c0534" x="684" y="0" width="114" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{measurement}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement uuid="604e4ae7-cd34-4152-99e5-441eeca0321d" x="672" y="25" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="c15cf65b-0503-4fe6-bf21-6a985056d0d9" x="752" y="25" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

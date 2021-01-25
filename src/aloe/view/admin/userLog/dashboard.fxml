@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.gauge.linear.SimpleMetroArcGauge?>
+
+<StackPane fx:id="stackPane" prefHeight="477.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.admin.userLog.DashboardController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="3000.0" prefWidth="968.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="172.0" prefWidth="10000.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #02707d;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #5ea7ab;" text="Total Logs" textFill="#f3feff">
+                                             <font>
+                                                <Font name="System Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblTotalLogs" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #02707d;" text="2,000" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Separator layoutX="626.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0">
+                                 <HBox.margin>
+                                    <Insets bottom="40.0" top="40.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="140.0" prefWidth="301.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <SimpleMetroArcGauge fx:id="monthTotalLogsGauge" maxValue="5.0E17" prefHeight="250.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total # Of Logs This Month">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lblmonthLogs" alignment="CENTER" layoutX="106.0" layoutY="217.0" prefHeight="28.0" prefWidth="207.0" text="( MWK )" textFill="#cf611b">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0">
+                                 <HBox.margin>
+                                    <Insets bottom="40.0" top="40.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox alignment="CENTER" layoutX="736.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="215.0" prefWidth="215.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <SimpleMetroArcGauge fx:id="todayTotalLogsGauge" maxValue="5.0E17" prefHeight="250.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total # Logs Today">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lblTodayLogs" alignment="CENTER" prefHeight="28.0" prefWidth="269.0" textFill="#cf611b">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <HBox prefHeight="3000.0" prefWidth="968.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="3000.0" prefWidth="3000.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <MenuButton fx:id="menuBtnTotal" mnemonicParsing="false" prefHeight="52.0" prefWidth="251.0" style="-fx-background-color: #cf611b;" text="Year AVG Time Spent " textFill="WHITE">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnYearAction" text="Year AVG Time Spent " />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnMonthAction" text="Month AVG Time Spent " />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnDayAction" text="Day AVG Time Spent " />
+                                       </items>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </MenuButton>
+                                    <Label fx:id="lblChoice" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="111.0" prefHeight="1000.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="31, January, 2019" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Line endX="100.0" startX="-100.0" stroke="WHITE" />
+                                    <Label fx:id="lblAvgLogs" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="146.0" prefHeight="1000.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0">
+                                 <HBox.margin>
+                                    <Insets bottom="40.0" top="40.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox alignment="CENTER" prefHeight="3000.0" prefWidth="3000.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="1000.0" prefWidth="300.0" spacing="40.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="3000.0">
+                                             <children>
+                                                <Gauge fx:id="mostLogGauge" prefHeight="1000.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Label alignment="CENTER" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #cf611b;" text="   Most Logging User" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblMostLogUsername" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0">
+                                 <HBox.margin>
+                                    <Insets bottom="40.0" top="40.0" />
+                                 </HBox.margin>
+                              </Separator>
+                              <VBox alignment="CENTER" layoutX="499.0" layoutY="10.0" prefHeight="3000.0" prefWidth="3000.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="1000.0" prefWidth="3000.0" spacing="40.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="3000.0">
+                                             <children>
+                                                <Gauge fx:id="leastLogGauge" prefHeight="1000.0" prefWidth="3000.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Label alignment="CENTER" prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #cf611b;" text="   Least Logging User" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblLeastLogUsername" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="251.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </center>
+         <top>
+            <BorderPane prefHeight="52.0" prefWidth="968.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblStatus" prefHeight="46.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" text="Logs Dashboard" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="45" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="249.0" BorderPane.alignment="CENTER" />
+               </right>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="477.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.pharmacist.stock.charts.DrugAgainstPacksController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <right>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" prefWidth="76.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <JFXButton fx:id="btnPrint" contentDisplay="TOP" onAction="#btnPrintAction" prefHeight="62.0" prefWidth="101.0" text="Print" textFill="#02707d">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="#02707d" glyphName="PRINT" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnVL" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#btnVLAction" prefHeight="62.0" prefWidth="141.0" text="VL" textFill="#02707d">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="#b2580f" glyphName="TH" size="20" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </right>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </center>
+         <top>
+            <BorderPane prefHeight="52.0" prefWidth="968.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="490.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblStatus" prefHeight="46.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" text="Drug Against  Entries" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="25" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnBarChart" layoutX="246.0" layoutY="18.0" onAction="#btnBarChartAction" text="Bar Chart" textFill="WHITE" underline="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnPieChart" layoutX="109.0" layoutY="24.0" onAction="#btnPieChartAction" text="Pie Chart" textFill="WHITE" underline="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

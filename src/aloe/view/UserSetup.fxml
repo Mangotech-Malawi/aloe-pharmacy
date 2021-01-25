@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="709.0" stylesheets="@../resources/styles/DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.UserSetupController">
+   <children>
+      <BorderPane fx:id="rootPane" prefHeight="570.0" prefWidth="709.0" styleClass="login" stylesheets="@../resources/styles/DarkTheme.css">
+         <bottom>
+            <BorderPane prefHeight="25.0" prefWidth="709.0" BorderPane.alignment="CENTER">
+               <left>
+                  <JFXButton fx:id="btnExit" onAction="#btnExitAction" ripplerFill="#262b39" text="Exit " underline="true" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="20.0" />
+                     </BorderPane.margin>
+                  </JFXButton>
+               </left>
+               <right>
+                  <JFXButton fx:id="btnHelp" onAction="#btnHelpAction" ripplerFill="#262b39" text="Help" underline="true" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="20.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </JFXButton>
+               </right>
+            </BorderPane>
+         </bottom>
+         <center>
+            <Group BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="pane" prefHeight="471.0" prefWidth="389.0">
+                     <children>
+                        <JFXTextField fx:id="Username_Field" focusColor="WHITE" labelFloat="true" layoutX="91.0" layoutY="202.0" maxWidth="225.0" minWidth="196.0" prefHeight="45.0" prefWidth="225.0" promptText="DB Username" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="LabelVerifyPassword" alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="107.0" prefHeight="45.0" prefWidth="266.0" text="You need to setup privilege username and password your PC to access the database " textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXPasswordField fx:id="Password_Field" focusColor="WHITE" labelFloat="true" layoutX="91.0" layoutY="301.0" onAction="#btnSetAction" prefHeight="45.0" prefWidth="225.0" promptText="DB Password" unFocusColor="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <Label layoutX="115.0" layoutY="45.0" prefHeight="62.0" prefWidth="178.0" text="Aloe Setup" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnSet" layoutX="118.0" layoutY="383.0" onAction="#btnSetAction" prefHeight="32.0" prefWidth="172.0" style="-fx-border-color: grey;" text="Set" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="50.0" />
+               </BorderPane.margin>
+            </Group>
+         </center>
+         <top>
+            <BorderPane prefHeight="38.0" prefWidth="709.0" styleClass="upperBox" stylesheets="@../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/Aloe%20Logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="32.0" prefWidth="317.0" text="DB Setup" textFill="#fcfcfc">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnMnimize" contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="10.0" onAction="#btnMnimizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnMaximize" contentDisplay="GRAPHIC_ONLY" layoutX="134.0" layoutY="10.0" onAction="#btnMaximizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="#ea4949" glyphName="TIMES_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

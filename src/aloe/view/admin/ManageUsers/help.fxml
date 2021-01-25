@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="570.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.admin.ManageUsers.HelpController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <BorderPane prefHeight="36.0" prefWidth="1105.0" style="-fx-background-color: #440303;" BorderPane.alignment="CENTER">
+               <left>
+                  <Label prefHeight="32.0" prefWidth="592.0" text="Help and Support" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="20.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+            </BorderPane>
+         </top>
+         <left>
+            <VBox prefHeight="534.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnWatchVideo" contentDisplay="TOP" onAction="#btnWatchVideoAction" prefHeight="207.0" prefWidth="251.0" styleClass="helpButtons" stylesheets="@../../../resources/styles/DarkTheme.css" text="Watch Video">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#cd0b0b" glyphName="CARET_SQUARE_ALT_RIGHT" size="100" />
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnViewScreenshots" contentDisplay="TOP" layoutX="40.0" layoutY="50.0" onAction="#btnViewScreenshotsAction" prefHeight="207.0" prefWidth="251.0" styleClass="helpButtons" stylesheets="@../../../resources/styles/DarkTheme.css" text="View Screenshots">
+                     <graphic>
+                        <FontAwesomeIconView fill="#097aad" glyphName="IMAGE" size="100" />
+                     </graphic>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" top="40.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="helpPane" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: White;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

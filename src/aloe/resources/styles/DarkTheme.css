@@ -1,0 +1,336 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 31, 2017, 3:43:18 AM
+    Author     : Senzenjani
+*/
+*{
+    -jfx-primary : #262b39;
+    -jfx-secondary :grey;
+}
+
+.backButton{
+    -fx-background-color: #262b39;
+    -fx-text-fill:#111126;
+}
+
+.login{
+     -fx-background-image: url(background.png); 
+}
+.tab{
+      -fx-animation-fill-mode: #59d5fb;
+     -fx-background-color:#262b39;
+     -fx-padding-left: 10em;
+}
+
+.root{
+     -fx-background-image: url(background.png); 
+}
+
+.Hbox{
+     -fx-background-color: #262b39;
+}
+.adminButton{
+      -fx-background-color:#111126;
+     
+      -fx-text-fill:#ffffff;
+      -fx-border-color: #59d5fb;
+      -fx-float: true;       
+}
+
+.settingsButtonButton{
+      -fx-background-color:#262b39;
+      -fx-border-bottom-style:  groove;
+      -fx-text-fill:#ffffff;
+      -fx-background-radius:60;
+      -fx-border-radius: 60;
+      -fx-border-color: #59d5fb;
+      -fx-float: true;       
+}
+
+.backSettingsbutton{
+      -fx-background-color:#262b39;
+      -fx-background-radius: 10;
+      -fx-border-radius: 10;
+      -fx-border-bottom-style:  groove;
+      -fx-text-fill:#ffffff;
+      -fx-border-color: #59d5fb;
+      -fx-float: true;       
+}
+
+.settingsButtonButton:hover{
+      -fx-background-color:#63b7f1;
+         
+}
+
+.backSettingsbutton:hover{
+      -fx-background-color:#63b7f1;
+      
+}
+
+.stockReportButton{
+    -fx-background-color: #262b39;
+    -fx-text-fill: #ffffff;
+}
+
+.stockReportButton:hover{
+    -fx-background-color: #63b7f1;
+}
+.fontAwesomeView{
+     -fx-fill:#ffffff;
+}
+
+.AnchorPane{
+    -fx-background-color: #262b39;
+}
+.VBox{
+      -fx-background-color: #262b39;
+}
+.MenuButton{
+      -fx-background-color:#262b39;
+      -fx-border-bottom-style:  groove;
+      -fx-border-color: #59d5fb;
+      -fx-float: true;      
+}
+.MenuButton:hover{
+    -fx-background-color:#116078;
+}
+
+.manageUsersButton{
+    -fx-background-color: #262b39;
+    -fx-text-fill: #ffffff;
+}
+
+
+.manageUsersButton:hover{
+    -fx-background-color: #63b7f1;
+    -fx-text-fill: #ffffff;
+}
+
+.manageDrugsbtn{
+    -fx-background-color: #262b39;
+    -fx-text-fill: #ffffff;
+}
+
+
+.manageDrugsbtn:hover{
+    -fx-background-color: #63b7f1;
+    -fx-text-fill: #ffffff;
+}
+
+.drugHbox{
+    -fx-background-color:#111126;
+}
+.borderPane{
+     -fx-background-color:#111126;
+}
+.text-input{
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+#pane{
+    -fx-border-radius: 20;
+    -fx-border-color:grey;
+}
+
+#rootPane{
+    -fx-background-color: -jfx-primary;
+}
+
+#Username_Field{
+    -fx-background-color: #ffffff;
+    -fx-border-color: grey;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-focus-color: #ffffff;
+    -fx-font-size:18px;
+}
+
+#Password_Field{
+     -fx-background-color: #ffffff;
+    -fx-border-color: grey;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-focus-color: #ffffff;
+    -fx-font-size:18px;
+}
+#btnExit{
+    -fx-text-fill: grey;
+}
+
+#btnHelp{
+    -fx-text-fill: grey;
+}
+
+#btnBack{
+     -fx-background-color: #262b39;
+}
+
+
+#btnBack:hover{
+     -fx-background-color: #63b7f1;
+}
+
+#back{
+    -fx-background-color: #262b39;
+}
+
+#clearAll{
+    -fx-background-color: #262b39;
+    -fx-text-fill: #ffffff;
+}
+
+#archive{
+     -fx-background-color: #262b39;
+     -fx-text-fill: #ffffff;
+}
+
+#viewLog{
+    -fx-background-color: #262b39;
+     -fx-text-fill: #ffffff;
+}
+
+#graph{
+    -fx-background-color: #262b39;
+     -fx-text-fill: #ffffff;
+}
+
+#clearAll:hover{
+    -fx-background-color: #63b7f1;
+    -fx-text-fill: #ffffff;
+}
+
+#archive:hover{
+     -fx-background-color: #63b7f1;
+     -fx-text-fill: #ffffff;
+}
+
+#viewLog:hover{
+    -fx-background-color: #63b7f1;
+     -fx-text-fill: #ffffff;
+}
+
+#graph:hover{
+    -fx-background-color: #63b7f1;
+     -fx-text-fill: #ffffff;
+}
+
+#back:hover{
+     -fx-background-color: #63b7f1;
+}
+
+#btnBuy{
+      -fx-background-color: #262b39;
+     -fx-text-fill: #ffffff;
+}
+
+#btnBuy:hover{
+      -fx-background-color: #63b7f1;
+     -fx-text-fill: #ffffff;
+}
+
+#btnManageDrugs{
+     -fx-background-color: #262b39;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+.AccountsButton{
+     -fx-background-color: #262b39;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+.AccountsButton:hover{
+     -fx-background-color: #63b7f1;
+}
+
+.bottomButtons{
+     -fx-background-color: #262b39;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+#btnAccounts{
+    -fx-background-color: #262b39;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+#btnhelp{
+     -fx-background-color: #262b39;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+#btnManageDrugs:hover{
+     -fx-background-color: #63b7f1;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+.bottomButtons:hover{
+     -fx-background-color: #63b7f1;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+.helpButtons:hover{
+     -fx-background-color: white;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+#btnAccounts:hover{
+    -fx-background-color: #63b7f1;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+#btnhelp:hover{
+     -fx-background-color: #63b7f1;
+     -fx-background-radius: 220;
+     -fx-text-fill: #ffffff;
+}
+
+#vbox{
+    -fx-background-color: #262b39;
+}
+
+#lblUsername{
+    -fx-text-fill: #59d5fb;
+}
+
+#settingsPane{
+    -fx-background-color: #262b39;
+}
+#search{
+    -fx-text-fill : white;
+}
+
+.ham{
+    -fx-spacing:4px;
+  
+    
+}
+.ham StackPane 
+{
+   -fx-background-color:white;
+   -fx-pref-width:30px;
+   -fx-background-radius:5px;
+}
+
+.sideButtons{
+     -fx-background-color: #262b39;
+     -fx-text-fill: #ffffff;
+}
+
+.sideButtons :hover{
+     -fx-background-color: #63b7f1;
+     -fx-text-fill: #ffffff;
+}
+.upperBox{
+    -fx-background-color: #20232b;
+}

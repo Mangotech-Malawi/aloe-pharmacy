@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="477.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.admin.userLog.MyLogController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <LineChart fx:id="monthChart" BorderPane.alignment="CENTER">
+                    <xAxis>
+                      <CategoryAxis label="Day of Month" side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" label="Number Of Logs" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </center></BorderPane>
+         </center>
+         <top>
+            <BorderPane prefHeight="52.0" prefWidth="968.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblStatus" prefHeight="46.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" text="MY LOG" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="45" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="249.0" BorderPane.alignment="CENTER" />
+               </right>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

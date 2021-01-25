@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1237.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.pharmacist.TransactionController">
+   <children>
+      <BorderPane fx:id="borderpane" prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="bntHome" contentDisplay="TOP" layoutX="395.0" layoutY="20.0" onAction="#btnHomeAction" prefHeight="75.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Home">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" />
+                     </graphic>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnStock" contentDisplay="TOP" onAction="#btnStockAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Stock">
+                     <graphic>
+                        <FontAwesomeIconView fill="#ae1010" glyphName="TABLE" size="30" />
+                     </graphic>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExpenses" contentDisplay="TOP" onAction="#btnExpenseAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Expense">
+                     <graphic>
+                        <FontAwesomeIconView fill="#1eacff" glyphName="DOLLAR" size="30" />
+                     </graphic>
+                     <effect>
+                        <Reflection bottomOpacity="0.02" fraction="0.67" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSystem" contentDisplay="TOP" layoutX="744.0" layoutY="20.0" onAction="#btnSettingsAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Settings">
+                     <graphic>
+                        <FontAwesomeIconView fill="#2feb51" glyphName="COGS" size="30" />
+                     </graphic>
+                     <effect>
+                        <Reflection bottomOpacity="0.02" fraction="0.67" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <BorderPane prefHeight="48.0" prefWidth="1237.0" styleClass="upperBox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/Aloe_1.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="32.0" prefWidth="317.0" text=" Aloe | Pharmacist | Transactions" textFill="#fcfcfc">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnMnimize" contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="10.0" onAction="#btnMnimizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnMaximize" contentDisplay="GRAPHIC_ONLY" layoutX="134.0" layoutY="10.0" onAction="#btnMaximizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="#ea4949" glyphName="TIMES_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <center>
+                  <Label fx:id="lblUsername" alignment="CENTER" prefHeight="30.0" prefWidth="955.0" text="Username" textFill="#59d5fb" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontAwesomeIconView fill="#59d5fb" glyphName="USER" size="20" />
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" maxHeight="1000.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="200.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator opacity="0.76" prefWidth="200.0" />
+                  <JFXButton fx:id="btnDashboard" onAction="#btnDashboardAction" prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #02707d;" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="DashBoard" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="30" wrappingWidth="38.0" />
+                     </graphic>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="2.0" right="2.0" top="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnViewTransactions" onAction="#btnViewTransactionsAction" prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #02707d;" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="View Transactions" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" size="30" wrappingWidth="32.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSales" layoutX="10.0" layoutY="149.0" onAction="#btnSalesAction" prefHeight="1000.0" prefWidth="800.0" style="-fx-background-color: #02707d;" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="View Sales" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DOLLAR" size="30" wrappingWidth="23.0" />
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnBack" contentDisplay="TOP" layoutX="10.0" layoutY="249.0" onAction="#btnBackAction" prefHeight="1000.0" prefWidth="200.0" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Back" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_ALT_LEFT" size="30" wrappingWidth="26.0" />
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Separator opacity="0.76" prefWidth="200.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="switchPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../../pRINT/MahaBacklog/src/Beautify/Admin.css" />
+      <URL value="@../../../../../../pRINT/MahaBacklog/src/Beautify/Operations.css" />
+   </stylesheets>
+</StackPane>

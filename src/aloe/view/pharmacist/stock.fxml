@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1237.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.pharmacist.StockController">
+   <children>
+      <BorderPane fx:id="borderpane" prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="bntHome" contentDisplay="TOP" layoutX="395.0" layoutY="20.0" onAction="#btnHomeAction" prefHeight="75.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Home">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExpenses" contentDisplay="TOP" onAction="#btnExpensesAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Expenses">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/coins.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSystem" contentDisplay="TOP" layoutX="744.0" layoutY="20.0" onAction="#btnSettingsAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Settings">
+                     <effect>
+                        <Reflection bottomOpacity="0.02" fraction="0.67" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/settings-3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnBack" contentDisplay="TOP" onAction="#btnBackAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Back">
+                     <effect>
+                        <Reflection bottomOpacity="0.02" fraction="0.67" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <BorderPane prefHeight="48.0" prefWidth="1237.0" styleClass="upperBox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/Aloe%20Logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="32.0" prefWidth="317.0" text=" Aloe | Pharmacist | Stock" textFill="#fcfcfc">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnMnimize" contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="10.0" onAction="#btnMnimizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnMaximize" contentDisplay="GRAPHIC_ONLY" layoutX="134.0" layoutY="10.0" onAction="#btnMaximizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="#ea4949" glyphName="TIMES_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <center>
+                  <Label fx:id="lblUsername" alignment="CENTER" prefHeight="30.0" prefWidth="955.0" text="Username" textFill="#59d5fb" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontAwesomeIconView fill="#59d5fb" glyphName="USER" size="20" />
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" maxHeight="1000.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="200.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnDashboard" layoutX="10.0" layoutY="13.0" onAction="#btnDashboardAction" prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #02707d;" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="DASHBOARD" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/pie-chart-6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <MenuButton fx:id="menuBtnViewCharts" mnemonicParsing="false" prefHeight="1000.0" prefWidth="800.0" style="-fx-background-color: #02707d;" stylesheets="@../../resources/styles/DarkTheme.css" text="View Charts" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#menuBtnDrugsAgainstEntriesAction" text=" Entries Quantity">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BAR_CHART" />
+                           </graphic></MenuItem>
+                      <MenuItem mnemonicParsing="false" onAction="#menuBtnExpiryConditionsAction" text="Entries Expiry Conditions">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BAR_CHART" />
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuBtnDrugsAgainstPacksAction" text="Packs Quantity">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BAR_CHART" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuBtnPacksExpiryConditionsAction" text="Packs Expiry Conditions">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BAR_CHART" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/graph-5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <MenuButton layoutX="10.0" layoutY="113.0" mnemonicParsing="false" prefHeight="1000.0" prefWidth="800.0" style="-fx-background-color: #02707d;" stylesheets="@../../resources/styles/DarkTheme.css" text="Drug Details" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#btnNewDrugAction" text="Add Drug Details">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PLUS" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#btnViewDrugsAction" text="View Drugs">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="EYE" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/more_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <JFXButton fx:id="btnDrugEntries" layoutX="10.0" layoutY="193.0" onAction="#btnDrugEntriesAction" prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #02707d;" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Drug Entries        " textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/incoming.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDrugPack" layoutX="10.0" layoutY="13.0" onAction="#btnDrugPackAction" prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #02707d;" styleClass="sideButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Drug Packs         " textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/briefcase.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="switchPane" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../../pRINT/MahaBacklog/src/Beautify/Admin.css" />
+      <URL value="@../../../../../../pRINT/MahaBacklog/src/Beautify/Operations.css" />
+   </stylesheets>
+</StackPane>

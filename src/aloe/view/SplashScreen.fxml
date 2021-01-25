@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="486.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.SplashScreenController">
+   <children>
+      <VBox prefHeight="328.0" prefWidth="332.0">
+         <children>
+            <HBox prefHeight="300.0" prefWidth="462.0">
+               <children>
+                  <ImageView fitHeight="332.0" fitWidth="487.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../resources/images/Nando.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

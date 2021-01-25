@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.layout.HBox?>
+<?import jfxtras.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" prefHeight="570.0" prefWidth="1105.0" style="-fx-border-color: darkBlue;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.receptionist.PosController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <BorderPane prefHeight="143.0" prefWidth="1105.0" BorderPane.alignment="CENTER">
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="100.0" prefWidth="302.0" spacing="2.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="376.0" text="Scan Here" textFill="#02707d" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <JFXTextField fx:id="txtCode" alignment="CENTER" maxWidth="282.0" minWidth="211.0" onKeyReleased="#scanBarcode" prefHeight="500.0" prefWidth="277.0" style="-fx-background-color: white;">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="30.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox alignment="CENTER" prefHeight="100.0" prefWidth="291.0" spacing="2.0">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="376.0" text="Drug Name" textFill="#02707d" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <JFXTextField fx:id="txtDrugName" alignment="CENTER" maxWidth="282.0" minWidth="211.0" onKeyReleased="#onDrugNameEntered" prefHeight="500.0" prefWidth="277.0" style="-fx-background-color: white;">
+                                       <padding>
+                                          <Insets top="30.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox alignment="CENTER" layoutX="318.0" layoutY="10.0" prefHeight="100.0" prefWidth="291.0" spacing="2.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="22.0" prefWidth="500.0" text="Entry or Pack No" textFill="#02707d" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <JFXComboBox fx:id="entryCombo" onAction="#onEntryNoSelected" prefHeight="500.0" prefWidth="500.0" promptText="Batch No" />
+                                          <JFXComboBox fx:id="packCombo" layoutX="10.0" layoutY="10.0" onAction="#onPackNoSelected" prefHeight="500.0" prefWidth="500.0" promptText="Pack No" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <JFXButton fx:id="btnAdd" buttonType="RAISED" contentDisplay="TOP" onAction="#btnAddAction" prefHeight="145.0" prefWidth="145.0" style="-fx-background-color: #02707d;" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="15.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </top>
+                     <center>
+                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox minWidth="100.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="212.0" text="Drug Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="212.0" text="Category">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="37.0" prefHeight="27.0" prefWidth="212.0" text="Quantity">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="37.0" prefHeight="27.0" prefWidth="212.0" text="Selling Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="212.0" text="Order Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="91.0" prefHeight="27.0" prefWidth="212.0" text="Expiry Date">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="1000.0">
+                                 <children>
+                                    <Label fx:id="lblDrugName" prefHeight="27.0" prefWidth="1000.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <Label fx:id="lblCategory" prefHeight="27.0" prefWidth="1000.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <Label fx:id="lblQuantity" prefHeight="27.0" prefWidth="1000.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <Label fx:id="lblSelling" prefHeight="27.0" prefWidth="1000.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <Label fx:id="lblOrderPrice" prefHeight="27.0" prefWidth="1000.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" />
+                                    <Label fx:id="lblExpiryDate" prefHeight="27.0" prefWidth="1000.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="20.0" right="20.0" top="2.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </center>
+               <right>
+                  <HBox prefHeight="220.0" prefWidth="334.0" style="-fx-border-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="162.0" prefWidth="357.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" prefHeight="34.0" prefWidth="410.0" style="-fx-background-color: #cf611b;" text="Total Charge " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalCharge" alignment="CENTER" contentDisplay="TOP" prefHeight="47.0" prefWidth="342.0">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="401.0" style="-fx-background-color: #02707d;" text="Balance " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblBalance" alignment="CENTER" prefHeight="47.0" prefWidth="351.0">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </right>
+               <top>
+                  <BorderPane prefHeight="48.0" prefWidth="1237.0" styleClass="upperBox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+                     <left>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="372.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/images/Aloe_1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="32.0" prefWidth="317.0" text=" Aloe | Receptionist | POS" textFill="#fcfcfc">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </left>
+                     <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="btnMnimize" contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="10.0" onAction="#btnMnimizeAction">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="17" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="CLOSED_HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnMaximize" contentDisplay="GRAPHIC_ONLY" layoutX="134.0" layoutY="10.0" onAction="#btnMaximizeAction">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="17" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="CLOSED_HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#ea4949" glyphName="TIMES_CIRCLE" size="17" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="CLOSED_HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </right>
+                     <center>
+                        <Label fx:id="lblUsername" alignment="CENTER" prefHeight="30.0" prefWidth="955.0" text="Username" textFill="#59d5fb" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView fill="#59d5fb" glyphName="USER" size="20" />
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </center>
+                  </BorderPane>
+               </top>
+               <left>
+                  <VBox prefHeight="399.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+               </left>
+            </BorderPane>
+         </top>
+         <bottom>
+            <BorderPane prefHeight="117.0" prefWidth="1105.0" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="835.0" spacing="10.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="0.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: #cf611b;" text="Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <JFXTextField fx:id="txtQuantity" alignment="CENTER" focusColor="#02707d" maxWidth="304.0" minWidth="211.0" prefHeight="51.0" prefWidth="211.0" style="-fx-background-color: #02707d; -fx-border-color: white; -fx-text-fill: white;" unFocusColor="#02707d">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" top="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #cf611b;" text="Payment" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <JFXTextField fx:id="txtPayment" alignment="CENTER" focusColor="#02707d" maxWidth="304.0" minWidth="211.0" onKeyReleased="#onPaymentKeyReleased" prefHeight="60.0" prefWidth="304.0" style="-fx-background-color: #02707d; -fx-border-color: white; -fx-text-fill: white;" unFocusColor="#02707d">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" right="10.0" top="10.0" />
+                           </padding>
+                        </JFXTextField>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <right>
+                  <VBox prefHeight="87.0" prefWidth="329.0" style="-fx-border-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="401.0" style="-fx-background-color: #02707d;" text="Total Today" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalToday" alignment="CENTER" prefHeight="47.0" prefWidth="351.0" text="MWK 53500">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </right>
+               <bottom>
+                  <BorderPane prefHeight="96.0" prefWidth="1105.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="bntHome" contentDisplay="TOP" onAction="#btnHomeAction" prefHeight="75.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Home">
+                                 <effect>
+                                    <Reflection />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/images/home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnTransaction" contentDisplay="TOP" layoutX="453.0" layoutY="23.0" onAction="#btnTransactionAction" prefHeight="75.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Transaction">
+                                 <effect>
+                                    <Reflection />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/images/get-money.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnSettings" contentDisplay="TOP" onAction="#btnSettingsAction" prefHeight="75.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Settings">
+                                 <effect>
+                                    <Reflection bottomOpacity="0.02" fraction="0.67" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/images/settings-3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnBack" contentDisplay="TOP" onAction="#btnBackAction" prefHeight="75.0" prefWidth="112.0" style="-fx-border-color: black; -fx-border-radius: 500;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Back" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </bottom>
+            </BorderPane>
+         </bottom>
+         <center>
+            <HBox prefHeight="1000.0" prefWidth="765.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblCart" prefHeight="161.0" prefWidth="1041.0">
+                     <columns>
+                        <TableColumn fx:id="itemCol" maxWidth="100.0" minWidth="0.0" prefWidth="100.0" text="Item" />
+                        <TableColumn fx:id="posIdCol" prefWidth="88.0" text="posId" visible="false" />
+                        <TableColumn fx:id="drugNameCol" prefWidth="167.0" text="Drug Name" />
+                        <TableColumn fx:id="categoryCol" prefWidth="230.0" text="Category" />
+                        <TableColumn fx:id="quantityCol" prefWidth="81.0" text="Quantity" />
+                        <TableColumn fx:id="chargeCol" minWidth="0.0" prefWidth="110.0" text="Charge" />
+                        <TableColumn fx:id="orderPriceCol" prefWidth="144.0" text="Order Price" visible="false" />
+                        <TableColumn fx:id="expiryDateCol" prefWidth="134.0" text="Expiry Date" />
+                        <TableColumn fx:id="removeCol" prefWidth="101.0" text="Remove" />
+                     </columns>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+         <right>
+            <VBox prefHeight="161.0" prefWidth="315.0" style="-fx-border-color: #02707d;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="1000.0" prefWidth="315.0" spacing="40.0">
+                     <children>
+                        <JFXButton fx:id="btnDone" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#btnDoneAction" prefHeight="103.0" prefWidth="125.0" style="-fx-background-color: #27751a; -fx-border-radius: 100;" text="Done" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE_ALT" size="60" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCancel" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#btnCancelAction" prefHeight="103.0" prefWidth="126.0" style="-fx-background-color: #c40529;" text="Cancel All" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="60" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</StackPane>

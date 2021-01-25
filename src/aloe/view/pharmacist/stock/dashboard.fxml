@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.gauge.linear.SimpleMetroArcGauge?>
+
+<StackPane fx:id="stackPane" prefHeight="477.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.pharmacist.stock.DashboardController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="3000.0" prefWidth="968.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="172.0" prefWidth="10000.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #02707d;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #5ea7ab;" text="Total Revenue" textFill="#f3feff">
+                                             <font>
+                                                <Font name="System Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblTotalRevenue" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #02707d;" text="2,000" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="10000.0" prefWidth="301.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <SimpleMetroArcGauge fx:id="packsRevenueGauge" maxValue="5.0E8" prefHeight="250.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Packs Revenue" wrappingWidth="86.13671875">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lblPacksTotalRevenue" alignment="CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="297.0" text="Label" textFill="#02707d">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="736.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="215.0" prefWidth="215.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <SimpleMetroArcGauge fx:id="entryRevenueGauge" maxValue="5.0E8" prefHeight="10000.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entries Revenue" wrappingWidth="96.13671875">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lblEntryTotalRevenue" alignment="CENTER" prefHeight="17.0" prefWidth="345.0" text="Label" textFill="#02707d">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin></Separator>
+                        <HBox prefHeight="3000.0" prefWidth="968.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="10000.0" prefWidth="10000.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <MenuButton fx:id="menuBtnTotal" mnemonicParsing="false" prefHeight="52.0" prefWidth="1000.0" style="-fx-background-color: #cf611b;" text="Total Added This Year" textFill="WHITE">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#menuBtnYearAction" text="Total Added This Year" />
+                                        <MenuItem mnemonicParsing="false" onAction="#menuBtnMonthAction" text="Total Added This Month" />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuBtnDayAction" text="Total Added This Day" />
+                                      </items>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </MenuButton>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="97.0" prefHeight="29.0" prefWidth="96.0" text="Entries">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTotalEntries" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="111.0" prefHeight="45.0" prefWidth="1000.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="134.0" prefHeight="29.0" prefWidth="96.0" text="Packs">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTotalPacks" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="146.0" prefHeight="45.0" prefWidth="1000.0" style="-fx-background-color: #02707d;" text="987892" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="3000.0" prefWidth="10000.0">
+                                 <children>
+                                    <Label prefHeight="31.0" prefWidth="288.0" style="-fx-background-color: #cf611b;" text="  Packs &amp; Entries" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="300.0" spacing="10.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="158.0" prefWidth="138.0">
+                                             <children>
+                                                <SimpleMetroArcGauge fx:id="numOfEntriesGauge" maxValue="1000000.0" prefHeight="1000.0" prefWidth="154.0" value="50000.0" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number Of Entries" wrappingWidth="102.35546875" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="158.0" prefWidth="138.0">
+                                             <children>
+                                                <SimpleMetroArcGauge fx:id="numOfPacksGauge" maxValue="1000000.0" prefHeight="10000.0" prefWidth="154.0" value="70.0" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Packs" wrappingWidth="97.35546875" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0">
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="286.0" style="-fx-background-color: #cf611b;" text="   Expiry Date Conditions" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="37.0" prefWidth="309.0">
+                                       <children>
+                                          <Label contentDisplay="CENTER" prefHeight="37.0" prefWidth="79.0" text="Excellent">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font></Label>
+                                          <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lblExValue" text="28%" />
+                                                <ProgressBar fx:id="exProgressBar" prefWidth="200.0" progress="1.0">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ProgressBar>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="41.0" prefHeight="37.0" prefWidth="309.0">
+                                       <children>
+                                          <Label contentDisplay="CENTER" prefHeight="37.0" prefWidth="78.0" text="Better">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lblBetterValue" text="28%" />
+                                                <ProgressBar fx:id="betterProgressBar" prefWidth="200.0" progress="0.52">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ProgressBar>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="78.0" prefHeight="37.0" prefWidth="309.0">
+                                       <children>
+                                          <Label contentDisplay="CENTER" prefHeight="37.0" prefWidth="78.0" text="Good">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lblGoodValue" text="28%" />
+                                                <ProgressBar fx:id="goodProgressBar" prefWidth="200.0" progress="0.52">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ProgressBar>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="115.0" prefHeight="37.0" prefWidth="309.0">
+                                       <children>
+                                          <Label contentDisplay="CENTER" prefHeight="37.0" prefWidth="78.0" text="Bad">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lblBadValue" text="28%" />
+                                                <ProgressBar fx:id="badProgressBar" prefWidth="200.0" progress="0.52">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ProgressBar>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="152.0" prefHeight="37.0" prefWidth="309.0">
+                                       <children>
+                                          <Label contentDisplay="CENTER" prefHeight="37.0" prefWidth="79.0" text="Worse">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lblWorseValue" text="28%" />
+                                                <ProgressBar fx:id="worseProgressBar" prefWidth="200.0" progress="0.52">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ProgressBar>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </center>
+         <top>
+            <BorderPane prefHeight="52.0" prefWidth="968.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblStatus" prefHeight="46.0" prefWidth="3000.0" style="-fx-background-color: #02707d;" text="Stock Dashboard" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="45" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </HBox>
+               </center>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="330.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnExpiryNotification" contentDisplay="RIGHT" layoutX="61.0" layoutY="18.0" onAction="#btnExpiryNotificationAction" prefHeight="36.0" prefWidth="87.0" ripplerFill="#02707d" style="-fx-border-radius: 10000; -fx-border-color: white;" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#eeff97" glyphName="INBOX" size="20" wrappingWidth="2.5714282989501953" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets bottom="3.0" right="20.0" top="3.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnEntryNotification" contentDisplay="RIGHT" layoutX="141.0" layoutY="18.0" onAction="#btnEntryNotificationAction" prefHeight="36.0" prefWidth="87.0" ripplerFill="#02707d" style="-fx-border-radius: 10000; -fx-border-color: white;" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#eeff97" glyphName="LEVEL_DOWN" size="20" wrappingWidth="2.5714282989501953" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnPackNotification" contentDisplay="RIGHT" layoutX="28.0" layoutY="18.0" onAction="#btnPackNotificationAction" prefHeight="36.0" prefWidth="87.0" ripplerFill="#02707d" style="-fx-border-radius: 10000; -fx-border-color: white;" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#eeff97" glyphName="BRIEFCASE" size="20" wrappingWidth="2.5714282989501953" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

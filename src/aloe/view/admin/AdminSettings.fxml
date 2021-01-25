@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1237.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.admin.AdminSettingsController">
+   <children>
+      <BorderPane fx:id="borderpane" prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="bntHome" contentDisplay="TOP" layoutX="395.0" layoutY="20.0" onAction="#btnHomeAction" prefHeight="75.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Home">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnManageUsers" contentDisplay="TOP" onAction="#btnManageUsers" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Manage Users">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/users-1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnUserLog" contentDisplay="TOP" onAction="#btnUserLogAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="User Log">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/list-11.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnBack" contentDisplay="TOP" layoutX="689.0" layoutY="20.0" onAction="#btnBackAction" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 5000;" styleClass="bottomButtons" stylesheets="@../../resources/styles/DarkTheme.css" text="Back">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <BorderPane prefHeight="37.0" prefWidth="1237.0" styleClass="Hbox" stylesheets="@../../resources/styles/DarkTheme.css" BorderPane.alignment="CENTER">
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnMnimize" contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="10.0" onAction="#btnMnimizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnMaximize" contentDisplay="GRAPHIC_ONLY" layoutX="134.0" layoutY="10.0" onAction="#btnMaximizeAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                           <graphic>
+                              <FontAwesomeIconView fill="#ea4949" glyphName="TIMES_CIRCLE" size="17" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <left>
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="314.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/Aloe%20Logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="32.0" prefWidth="317.0" text=" Aloe | Admin | Settings" textFill="#fcfcfc">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </left>
+               <center>
+                  <Label fx:id="lblUsername" alignment="CENTER" prefHeight="30.0" prefWidth="955.0" text="Username" textFill="#59d5fb" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <FontAwesomeIconView fill="#59d5fb" glyphName="USER" size="20" />
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <BorderPane fx:id="root" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <StackPane fx:id="switchPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center></BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../../pRINT/MahaBacklog/src/Beautify/Admin.css" />
+      <URL value="@../../../../../../pRINT/MahaBacklog/src/Beautify/Operations.css" />
+   </stylesheets>
+</StackPane>

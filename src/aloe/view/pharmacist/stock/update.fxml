@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="395.0" prefWidth="829.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aloe.controller.pharmacist.stock.UpdateController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <BorderPane prefHeight="35.0" prefWidth="1105.0" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="1105.0" style="-fx-background-color: #510435;" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane prefHeight="30.0" prefWidth="1000.0" style="-fx-background-color: #02707d;">
+                           <left>
+                              <HBox prefHeight="35.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="lblStatus" prefHeight="35.0" prefWidth="332.0" style="-fx-background-color: #02707d;" text="Update Drug" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="3.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="MEDKIT" size="15" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </left>
+                           <right>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton fx:id="btnMnimize" contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="10.0" onAction="#btnMnimizeAction">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="15" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="CLOSED_HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" onAction="#btnCloseAction">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#ffa9a9" glyphName="TIMES_CIRCLE" size="15" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="CLOSED_HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="464.0" prefWidth="959.0">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="448.0" prefWidth="0.0" />
+                        <VBox prefHeight="355.0" prefWidth="263.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="39.0" prefWidth="3000.0" style="-fx-background-color: grey;" text="Update Details" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <JFXTextField fx:id="txtId" editable="false" focusColor="#510435" labelFloat="true" maxWidth="240.0" minWidth="240.0" prefHeight="50.0" prefWidth="240.0" promptText="Id (Unique)">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="30.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtName" focusColor="#510435" labelFloat="true" layoutX="30.0" layoutY="76.0" maxWidth="230.0" minWidth="230.0" prefHeight="43.0" prefWidth="230.0" promptText="Name">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXComboBox fx:id="categoryOneCombo" onAction="#OnSelected" prefHeight="44.0" prefWidth="218.0" promptText="First Category" style="-fx-font-size: +16;" visibleRowCount="12">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="categoryTwoCombo" prefHeight="44.0" prefWidth="210.0" promptText="Second Category" style="-fx-font-size: +16;">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="492.0" prefWidth="0.0">
+                           <HBox.margin>
+                              <Insets bottom="40.0" top="40.0" />
+                           </HBox.margin></Separator>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="355.0" prefWidth="254.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="284.0" style="-fx-background-color: grey;" text="More details" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <JFXTextField fx:id="txtUnitOfMeasurement" focusColor="#510435" labelFloat="true" maxWidth="307.0" minWidth="139.0" prefHeight="50.0" prefWidth="139.0" promptText="Unit Of Measurement">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtSellingPrice" focusColor="#510435" labelFloat="true" layoutX="30.0" layoutY="75.0" maxWidth="307.0" minWidth="244.0" prefHeight="50.0" prefWidth="307.0" promptText="Selling Price ( MWK)">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtOrderPrice" focusColor="#510435" labelFloat="true" layoutX="30.0" layoutY="243.0" promptText="Order Price ( MWK )">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="284.0">
+                                 <children>
+                                    <JFXButton fx:id="btnSave" onAction="#btnSaveAction" prefHeight="45.0" prefWidth="300.0" text="Save" underline="true">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="SAVE" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnCancel" layoutX="10.0" layoutY="10.0" onAction="#btnCancelAction" prefHeight="45.0" prefWidth="311.0" text="Cancel" underline="true">
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="TIMES" size="20" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="1000.0">
+                           <HBox.margin>
+                              <Insets bottom="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox prefHeight="1000.0" prefWidth="500.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="45.0" prefWidth="264.0" style="-fx-background-color: grey;" text="More details" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextArea fx:id="txtDescription" labelFloat="true" maxWidth="232.0" minWidth="232.0" prefHeight="244.0" prefWidth="232.0" promptText="Description" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="4.0" left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXTextArea>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
